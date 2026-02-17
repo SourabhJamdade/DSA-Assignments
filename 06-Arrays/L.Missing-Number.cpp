@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        int count = 0;
+        for (int j = 0; j < n; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                count++;
+            }
+        }
+        if (count == 1)
+        {
+            cout << arr[i];
+            break;
+        }
+    }
+
+    cout << endl;
+}
+int main()
+{
+    // your code goes here
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++)
+    {
+        solve();
+    }
+}
